@@ -5,7 +5,9 @@
 
 //Definir la taille du tableau
 
-
+//BUT:Faire un carré magique qui fait en sorte que  la somme de chaque ligne horizontale, de chaque colonne verticale et de chaque diagonale est égale à un même nombre S (qu'on appelle la somme magique)
+//ENTRÉE: La constante du Taille Tableau
+//SORTIE: Affichage du carré magique
 typedef struct Point Point;
 struct Point
 {
@@ -33,7 +35,9 @@ afficher();    //procédure qui affiche le tableau
 
 
 
-
+//BUT: Placement des nombres et replacement si on dépasse les bords du carré
+//ENTRÉE:
+//SORTIE: Les nombres sont correctement placés et une fois qu'on dépasse le bord du carré on revient de l'autre côté
 void avancer(){
 position.x=((TAILLE_TABLEAU/5)-1); //Départ intial sur la cellule au nord par rapport au milieu
 position.y=(TAILLE_TABLEAU/5);
@@ -90,6 +94,9 @@ carre[position.x][position.y]=nombre;
 
 }
 
+//BUT:Afficher les cellules
+//ENTRÉE:
+//SORTIE: Affichage des cellules
 void afficher(){
 
 for(a=0;a<TAILLE_TABLEAU;a++){
@@ -107,6 +114,9 @@ else {
 }
 }
 
+//BUT:Initialiser le tableau
+//ENTRÉE: Taille du tableau initialisé plus haut
+//SORTIE:Initialisation du tableau
 void init(){
 
 for(a=0;a<TAILLE_TABLEAU;a++){
